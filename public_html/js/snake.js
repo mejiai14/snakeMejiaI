@@ -43,9 +43,9 @@ function gameInitialize() {
     canvas.width = screenWidth;
     canvas.height = screenHeight;
     
-    document.addEventListener("keydown");
+    document.addEventListener("keydown", keyboardHandler);
     
-    gameOverMenu = document.getElementById("gameOver")
+    gameOverMenu = document.getElementById("gameOver");
     centerMenuPosition(gameOverMenu);
     
     setState("PLAY");
