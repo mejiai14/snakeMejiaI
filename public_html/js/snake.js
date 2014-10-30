@@ -123,6 +123,7 @@ function snakeUpdate() {
    
    checkFoodCollisions(snakeHeadX, snakeHeadY);
    checkWallCollisions(snakeHeadX, snakeHeadY);
+   checkFoodCollisions(snakeHeadX, snakeHeadY);
    
     var snakeTail = snake.pop();
     snakeTail.x = snakeHeadX;
@@ -191,6 +192,14 @@ function checkWallCollisions(snakeHeadX, snakeHeadY) {
     }
 }
 
+function checkSnakeCollisions(snakeHeadX, snakeHeadY) {
+    for(var index = 1; index < snake.length; index++) {
+        if(snakeHeadX == snake[index].x && snakeHeadY == snake[index].y) {
+            setState("Game Over");
+            return;
+        }
+    }
+}
 /* -------------------------------------------------------------------------
  * Game State Handling
  * -------------------------------------------------------------------------
