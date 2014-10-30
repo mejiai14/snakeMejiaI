@@ -8,12 +8,12 @@ body{
     
 }
 
-#gameOver {
+#gameOver, #playHUD {
     position: absolute;
     visibility: hidden;
 }
 
-h1, h3 {
+h1, h2, h3 {
     font-family: 'Francois One', sans-serif;
     color: lawngreen;
     text-align: center;
