@@ -19,6 +19,7 @@ var gameState;
 var gameOverMenu;
 var restartButton;
 var playHud;
+var scoreboard;
 
 /* --------------------------------------------------------------------------
  * Executing Game Code
