@@ -15,7 +15,7 @@ body{
 
 h1, h2, h3 {
     font-family: 'Francois One', sans-serif;
-    color: lawngreen;
+    
     text-align: center;
 }
 
@@ -31,7 +31,7 @@ h1, h2, h3 {
 }
 
 #restartButton:hover {
-   background-color: orange;
+
 }
 
 #scoreboard {
