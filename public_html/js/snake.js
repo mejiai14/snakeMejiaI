@@ -119,11 +119,11 @@ function snakeUpdate() {
        snakeHeadX--;
    }
    
-   else if(snakeDirection == "right") {
+   else if(snakeDirection === "right") {
        snakeHeadX++;
     }
    
-   else if(snakeDirection == "up") {
+   else if(snakeDirection === "up") {
        snakeHeadY--;
    }
    
