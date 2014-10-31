@@ -52,7 +52,7 @@ function gameInitialize() {
     centerMenuPosition(gameOverMenu);
     
     restartButton = document.getElementById(restartButton);
-    restartButton.addEventListener("click", gameRestart);
+    restartButton. addEventListener("click", gameRestart);
     
     playHUD = document.getElementById("playHUD");
     scoreboard = document.getElementById("scoreboard");
@@ -169,10 +169,10 @@ function setFoodPosition() {
 function keyboardHandler(event) {
     console.log(event, keyboardHandler);
     
-    if(event.keycode == "39" && snakeDirection != "left") {
+    if(event.keycode === "39" && snakeDirection !== "left") {
         snakeDirection = "right";
     }
-    else if(event.keycode == "40" && snakeDirection != "up") {
+    else if(event.keycode === "40" && snakeDirection !== "up") {
         snakeDirection = "down";
     }
 }
@@ -183,7 +183,7 @@ function keyboardHandler(event) {
  */
 
 function checkFoodCollisions(snakeHeadX, snakeY) {
-    if(snakeHeadX == food.x && snakeHeadY == food.y) {
+    if(snakeHeadX === food.x && snakeHeadY === food.y) {
         snake.push({
             x: 0,
             y: 0
@@ -200,7 +200,7 @@ function checkWallCollisions(snakeHeadX, snakeHeadY) {
 
 function checkSnakeCollisions(snakeHeadX, snakeHeadY) {
     for(var index = 1; index < snake.length; index++) {
-        if(snakeHeadX == snake[index].x && snakeHeadY == snake[index].y) {
+        if(snakeHeadX === snake[index].x && snakeHeadY === snake[index].y) {
             setState("Game Over");
             return;
         }
@@ -230,10 +230,10 @@ function hideMenu(menu){
 }
 
 function showMenu(state) {
-    if(gameState == "GAME OVER") {
+    if(gameState === "GAME OVER") {
     displayMenu(GameOverMenu);
     }
-    else if(set == "PLAY") {
+    else if(set === "PLAY") {
         displayMenu(playHUD);
     }
 }
