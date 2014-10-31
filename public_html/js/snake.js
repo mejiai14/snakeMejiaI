@@ -51,8 +51,8 @@ function gameInitialize() {
     gameOverMenu = document.getElementById("gameOver");
     centerMenuPosition(gameOverMenu);
     
-    restartButton = document.getElementById(restartButton);
-    restartButton. addEventListener("click", gameRestart);
+    restartButton = document.getElementById("restartButton");
+    restartButton.addEventListener("click", gameRestart);
     
     playHUD = document.getElementById("playHUD");
     scoreboard = document.getElementById("scoreboard");
@@ -63,7 +63,7 @@ function gameInitialize() {
 function gameLoop() {
     gameDraw();
     drawScoreboard();
-    if(gameState === "PLAY") {
+    if(gameState == "PLAY") {
     snakeUpdate();
     snakeDraw();
     foodDraw();
@@ -111,19 +111,19 @@ function snakeUpdate() {
     var snakeHeadX = snake[0].x;
     var snakeHeadY = snake[0].y;
     
-   if(snakeDirection === "down") {
+   if(snakeDirection == "down") {
        snakeHeadY++;
    }
    
-   else if(snakeDirection === "left"){
+   else if(snakeDirection == "left"){
        snakeHeadX--;
    }
    
-   else if(snakeDirection === "right") {
+   else if(snakeDirection == "right") {
        snakeHeadX++;
     }
    
-   else if(snakeDirection === "up") {
+   else if(snakeDirection == "up") {
        snakeHeadY--;
    }
    
@@ -230,10 +230,10 @@ function hideMenu(menu){
 }
 
 function showMenu(state) {
-    if(gameState === "GAME OVER") {
+    if(gameState == "GAME OVER") {
     displayMenu(GameOverMenu);
     }
-    else if(set === "PLAY") {
+    else if(state == "PLAY") {
         displayMenu(playHUD);
     }
 }
