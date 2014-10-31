@@ -62,6 +62,7 @@ function gameInitialize() {
 
 function gameLoop() {
     gameDraw();
+    drawScoreboard();
     if(gameState == "PLAY") {
     snakeUpdate();
     snakeDraw();
