@@ -55,6 +55,7 @@ function gameInitialize() {
     restartButton.addEventListener("click", gameRestart);
     
     playHUD = document.getElementById("playHUD");
+    scoreboard = document.getElementById("scoreboard");
     
     setState("PLAY");
 }
