@@ -243,5 +243,5 @@ function centerMenuPosition(menu) {
 }
 
 function drawScoreboard() {
-    
+    scoreboard.innerHTML = snakeLength;
 }
